@@ -262,12 +262,13 @@ layout = [
 
 [sg.HorizontalSeparator()], # separador
 
-[sg.Text('Instalar extensões', font='Any 13'),], # Nome da seção
+[sg.Text('Extensões e Libs', font='Any 13'),], # Nome da seção
 
 [sg.Radio('Instalar', "RADIO1",tooltip='  Instala as libs mais usadas  ',  key='-INSTALL-'),
  sg.Radio('Desinstalar', "RADIO1",tooltip='  Desinstala o NBExtensions e desativa as extensões  ', key='-UNINSTALL-'),
  sg.Radio('Não fazer nada', "RADIO1",tooltip='  Marcar para debug ou caso queira apenas fechar os notebooks abertos :)  ',default=True, key='-NOTHING-'),], # opções de instalar ou desinstalar
-
+[sg.Checkbox('Fechar notebooks abertos', default=True,key='-CLOSE_BOOKS-', font='Any 13')], 
+[sg.Button('Run', key='-RUN-', tooltip='Aplica a ação selecionada (instala ou desinstala)')],
 [sg.HorizontalSeparator()], # separador
 
 [sg.Text('Alterar tema do Notebook', font='Any 13'),], # Outra seção
@@ -306,13 +307,13 @@ layout = [
 
 
 [sg.Button('Aplicar',tooltip='  Aplica o tema selecionado  ', key='-APLICAR_TEMA-'),
- sg.Button('Retirar',tooltip='  Reseta o tema do jupyter notebook  ', key='-RETIRA_TEMA-')], #Botões para aplicar ou retirar o tema
+ sg.Button('Retirar',tooltip='  Reseta o tema do jupyter notebook  ', key='-RETIRA_TEMA-'),
+ sg.Button('Sobre os temas', key='-ABOUT_THEMES-')], #Botões para aplicar ou retirar o tema
 
 [sg.HorizontalSeparator()],
 
-[sg.Checkbox('Fechar notebooks abertos', default=True,key='-CLOSE_BOOKS-', font='Any 13')], 
 
-[sg.Button('Run', key='-RUN-'),sg.Button('Sobre', key='-ABOUT-'), sg.Quit()],
+[sg.Button('Sobre o programa', key='-ABOUT-'), sg.Quit()],
 ]
  ###########################################################################################################
  ###########################################################################################################
@@ -330,7 +331,9 @@ while True:
 #         print("event: '" + str(event) + "'\nvalue: '" + str(value) + "'")
         if event in ('Quit', sg.WIN_CLOSED):
            break
-        
+        if event == '-ABOUT_THEMES-':
+            os.system("start \"\" https://github.com/dunovank/jupyter-themes")
+
         if event == '-ABOUT-' and not window_info_active:          
             window_info_active = True
             layout_info = [
