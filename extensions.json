@@ -1,0 +1,14 @@
+[
+    "autosavetime/main",
+    "autoscroll/main",
+    "codefolding/main",
+    "addbefore/main",
+    "toggle_all_line_numbers/main",
+    "toc2/main",
+    "skip-traceback/main",
+    "scroll_down/main",
+    "livemdpreview/livemdpreview",
+    "execute_time/ExecuteTime",
+    "highlight_selected_word/main",
+    "varInspector/main"
+]
