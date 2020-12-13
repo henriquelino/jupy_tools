@@ -4,7 +4,7 @@
 
 # Como instalar o Python :)
 ## Realizar o download do instalador:
-link para download anaconda: `https://repo.anaconda.com/archive/`
+>[Link para download anaconda](https://repo.anaconda.com/archive/)<
 
 ## Procurar pelas versões abaixo:  
 `Anaconda3-2019.10-Windows-x86_64.exe` >> "tentar instalar esse primeiro"  
