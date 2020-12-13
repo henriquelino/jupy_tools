@@ -5,8 +5,8 @@
 Realizar o download do instalador:
 link para download anaconda: `https://repo.anaconda.com/archive/`
 
-Procurar pelas versões abaixo:
-`Anaconda3-2019.10-Windows-x86_64.exe` >> "tentar instalar esse primeiro"
+Procurar pelas versões abaixo:  
+`Anaconda3-2019.10-Windows-x86_64.exe` >> "tentar instalar esse primeiro" <br>
 `Anaconda3-2019.07-Windows-x86_64.exe` >> "caso contrario tentar por esse"
 
 instalar o requirements utilizando o cmd
